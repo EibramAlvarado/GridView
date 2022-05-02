@@ -31,15 +31,15 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Flutter GridView"),
+          title: const Text("Flutter GridView"),
         ),
         body: GridView.builder(
           itemCount: images.length,
           itemBuilder: (BuildContext context, int index) {
             return Image.asset(images[index], fit: BoxFit.cover);
           },
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, mainAxisSpacing: 10, crossAxisSpacing: 10),
-          padding: EdgeInsets.all(10),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, mainAxisSpacing: 10, crossAxisSpacing: 10),
+          padding: const EdgeInsets.all(10),
           shrinkWrap: true,
         ));
   }
